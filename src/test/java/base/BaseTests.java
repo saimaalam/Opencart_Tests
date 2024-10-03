@@ -65,8 +65,9 @@ public class BaseTests {
         if (ITestResult.FAILURE == result.getStatus()) {
             capture = (TakesScreenshot) driver;
             File screenshot = capture.getScreenshotAs(OutputType.FILE);
+            File destination = new File("screenshots/"+ result.getName()+ ".png");
             try {
-                Files.move(screenshot, new File("screenshots" + result.getName() + ".png"));
+                Files.move(screenshot,destination);
             } catch (IOException e) {
                 e.printStackTrace();
             }

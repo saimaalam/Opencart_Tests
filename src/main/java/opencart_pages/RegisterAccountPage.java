@@ -43,6 +43,7 @@ public class RegisterAccountPage {
         driver.findElement(passwordField).sendKeys(password);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
+    public void
     public void clickContinueButton(){
         driver.findElement(continueButton).click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
