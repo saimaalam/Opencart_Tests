@@ -4,16 +4,14 @@ import org.testng.annotations.DataProvider;
 
 public class LoginTestDataGenerator {
     RegistrationTestDataGenerator data = new RegistrationTestDataGenerator();
-    public String getEmail(){
-       return data.email;
-   }
-    public String getPassword(){
-        return data.password;
-    }
+       String email= data.getRegisteredEmail();
+       String password= data.getRegisteredPassword();
+
     @DataProvider(name = "LoginData")
-    public Object[][] generateRegistrationData() {
+    public Object[][] generateLoginData() {
+
         return new Object[][] {
-                {data.email,data.password},
+                {email,password},
         };
     }
 }

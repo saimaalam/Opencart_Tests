@@ -60,7 +60,8 @@ public class BaseTests {
     @BeforeMethod
     public void navigateToUrl() {
         driver.get("https://demo.opencart.com");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+        driver.manage().window().maximize();
         homePage = new Homepage(driver);
 
     }
@@ -80,6 +81,7 @@ public class BaseTests {
         }
 
     }
+    @AfterClass
     public void quitBrowser() {
         driver.quit();
     }

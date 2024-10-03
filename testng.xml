@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="E:/Opencart_Tests">
+        <classes>
+            <class name="registration.RegistrationTests">
+                <methods>
+                    <include name="TC_1_Verify_that_a_new_user_can_register"/>
+                </methods>
+            </class>
+            <class name="login.LoginTests">
+                <methods>
+                    <include name="TC_4_Verify_that_user_can_login_with_valid_credentials"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

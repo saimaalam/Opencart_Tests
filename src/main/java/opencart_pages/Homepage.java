@@ -15,13 +15,13 @@ public class Homepage {
         this.driver = driver;
     }
     public void clickMyAccount(){
-          WebDriverWait wait =  new WebDriverWait(driver, Duration.ofSeconds(120));
-         wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//span[normalize-space(text())='My Account']"))));
         driver.findElement(By.xpath("//span[normalize-space(text())='My Account']")).click();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 
     }
     public RegisterAccountPage clickRegister(){
         clickMyAccount();
+        driver.findElement(By.xpath("//span[normalize-space(text())='My Account']")).click();
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(60));
         wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.linkText("Register"))));
         driver.findElement(By.linkText("Register")).click();
