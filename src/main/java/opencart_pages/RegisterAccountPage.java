@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -28,17 +29,21 @@ public class RegisterAccountPage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
         wait.until(ExpectedConditions.presenceOfElementLocated(pageHeader));
     }
-    private void scrollToElement(){
-        String script= "window.scrollTo(0, document.body.scrollHeight);";
-        ((JavascriptExecutor)driver).executeScript(script);
+    private void scrollToElement(WebElement element){
+        String script= "arguments[0].scrollIntoView();";
+        ((JavascriptExecutor)driver).executeScript(script,element);
 
     }
     public void scrollToPrivacyPolicy(){
-        scrollToElement();
+        WebElement element= driver.findElement(privacyPolicyCheckbox);
+        Actions a = new Actions(driver);
+        a.moveToElement(element).perform();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
     public void scrollToContinueButton(){
-        scrollToElement();
+       WebElement element= driver.findElement(continueButton);
+        Actions a = new Actions(driver);
+        a.moveToElement(element).perform();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
     public void setFirstName(String firstName){

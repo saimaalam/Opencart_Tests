@@ -3,10 +3,14 @@ package base;
 import com.google.common.io.Files;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import opencart_pages.Homepage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -15,6 +19,7 @@ import org.testng.annotations.BeforeMethod;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 
@@ -55,8 +60,9 @@ public class BaseTests {
     @BeforeMethod
     public void navigateToUrl() {
         driver.get("https://demo.opencart.com");
+        WebDriverWait wait =  new WebDriverWait(driver, Duration.ofSeconds(120));
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//span[normalize-space(text())='My Account']"))));
         homePage = new Homepage(driver);
-        driver.manage().timeouts().implicitlyWait(45, TimeUnit.SECONDS);
 
     }
 
@@ -75,12 +81,6 @@ public class BaseTests {
         }
 
     }
-
-    public void maximizeWindow() {
-        driver.manage().window().maximize();
-    }
-
-    @AfterClass
     public void quitBrowser() {
         driver.quit();
     }
