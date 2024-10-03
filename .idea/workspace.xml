@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d74e367-dfa5-4a31-842a-bc83ec35dd2a" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/LoginTestDataGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/opencart_pages/LoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/opencart_pages/MyAccoutPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/login/LoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/TC_1_Verify_that_a_new_user_can_register.png" beforeDir="false" afterPath="$PROJECT_DIR$/screenshots/TC_1_Verify_that_a_new_user_can_register.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/opencart_pages/Homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/opencart_pages/Homepage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/opencart_pages/RegisterAccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/opencart_pages/RegisterAccountPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/TestDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/RegistrationTestDataGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/LoginTestDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/LoginTestDataGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/base/BaseTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/BaseTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/registration/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/registration/RegistrationTests.java" afterDir="false" />
     </list>
@@ -29,9 +30,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2msNq8rZVhwdox0m8LPs1fN7EYJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -42,15 +43,37 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.LoginTests.TC_4_Verify_that_user_can_login_with_valid_credentials.executor": "Run",
     "TestNG.RegistrationTests.TC_1_Verify_that_a_new_user_can_register.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/Selenium_4",
+    "last_opened_file_path": "E:/Opencart_Tests",
     "onboarding.tips.debug.path": "E:/Opencart_Tests/Opencart_Tests/src/main/java/Opencart/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.LoginTests.TC_4_Verify_that_user_can_login_with_valid_credentials">
+    <configuration name="LoginTests.TC_4_Verify_that_user_can_login_with_valid_credentials" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Opencart_Tests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="login.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="login" />
+      <option name="MAIN_CLASS_NAME" value="login.LoginTests" />
+      <option name="METHOD_NAME" value="TC_4_Verify_that_user_can_login_with_valid_credentials" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RegistrationTests.TC_1_Verify_that_a_new_user_can_register" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Opencart_Tests" />
       <extension name="coverage">
@@ -71,6 +94,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LoginTests.TC_4_Verify_that_user_can_login_with_valid_credentials" />
         <item itemvalue="TestNG.RegistrationTests.TC_1_Verify_that_a_new_user_can_register" />
       </list>
     </recent_temporary>

@@ -14,13 +14,11 @@ public class Homepage {
     public Homepage(WebDriver driver) {
         this.driver = driver;
     }
-    public void clickElement(String xpath){
-        driver.findElement(By.xpath(xpath)).click();
-
-    }
     public void clickMyAccount(){
-        clickElement("//span[normalize-space(text())='My Account']");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+          WebDriverWait wait =  new WebDriverWait(driver, Duration.ofSeconds(120));
+         wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//span[normalize-space(text())='My Account']"))));
+        driver.findElement(By.xpath("//span[normalize-space(text())='My Account']")).click();
+
     }
     public RegisterAccountPage clickRegister(){
         clickMyAccount();
@@ -30,6 +28,15 @@ public class Homepage {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         return new RegisterAccountPage(driver);
 
+    }
+    public LoginPage clickLogin(){
+        clickMyAccount();
+        driver.findElement(By.xpath("//span[normalize-space(text())='My Account']")).click();
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(60));
+        wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.linkText("Login"))));
+        driver.findElement(By.linkText("Login")).click();
+         wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("form-login"))));
+        return new LoginPage(driver);
     }
 
 }

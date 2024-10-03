@@ -60,8 +60,7 @@ public class BaseTests {
     @BeforeMethod
     public void navigateToUrl() {
         driver.get("https://demo.opencart.com");
-        WebDriverWait wait =  new WebDriverWait(driver, Duration.ofSeconds(120));
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//span[normalize-space(text())='My Account']"))));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
         homePage = new Homepage(driver);
 
     }
