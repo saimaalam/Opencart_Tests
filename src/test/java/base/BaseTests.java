@@ -56,7 +56,7 @@ public class BaseTests {
     public void navigateToUrl() {
         driver.get("https://demo.opencart.com");
         homePage = new Homepage(driver);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(45, TimeUnit.SECONDS);
 
     }
 

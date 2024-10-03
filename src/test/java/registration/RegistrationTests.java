@@ -1,8 +1,10 @@
 package registration;
 
 import base.BaseTests;
+import opencart_pages.AccountSuccessPage;
 import opencart_pages.RegisterAccountPage;
 import org.testng.annotations.*;
+import org.testng.asserts.SoftAssert;
 import utils.TestDataGenerator;
 
 public class RegistrationTests extends BaseTests {
@@ -15,7 +17,13 @@ public class RegistrationTests extends BaseTests {
     registerAccountPage.setLastName(lastName);
     registerAccountPage.setemail(email);
     registerAccountPage.setPassword(password);
-    registerAccountPage.clickContinueButton();
+    registerAccountPage.scrollToPrivacyPolicy();
+    registerAccountPage.checkPrivacyPolicyCheckbox();
+    registerAccountPage.scrollToContinueButton();
+    AccountSuccessPage accountSuccessPage= registerAccountPage.clickContinueButton();
+    SoftAssert softAssert= new SoftAssert();
+    softAssert.assertEquals(accountSuccessPage.getPageHeader(),"Your Account Has Been Created!","Test Failed!!! Message not displayed");
+    softAssert.assertTrue(accountSuccessPage.isContinueButtonPresent(),"Test failed!!! Button doesn't Displayed");
 }
 
 }
