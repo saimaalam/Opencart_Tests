@@ -3,15 +3,18 @@ package utils;
 import org.testng.annotations.DataProvider;
 
 public class LoginTestDataGenerator {
-    RegistrationTestDataGenerator data = new RegistrationTestDataGenerator();
-       String email= data.getRegisteredEmail();
-       String password= data.getRegisteredPassword();
 
     @DataProvider(name = "LoginData")
     public Object[][] generateLoginData() {
+        // Access the data stored in UserDataStorage class
+        String fname = DataStorage.registeredFirstName;
+        String lname = DataStorage.registeredLastName;
+        String email = DataStorage.registeredEmail;
+        String password = DataStorage.registeredPassword;
 
-        return new Object[][] {
-                {email,password},
+        // Return the data for the login test
+        return new Object[][]{
+                {email, password},
         };
     }
 }
