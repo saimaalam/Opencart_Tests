@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d74e367-dfa5-4a31-842a-bc83ec35dd2a" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/DataStorage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/TC_1_Verify_that_a_new_user_can_register.png" beforeDir="false" afterPath="$PROJECT_DIR$/screenshots/TC_1_Verify_that_a_new_user_can_register.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenshots/TC_4_Verify_that_user_can_login_with_valid_credentials.png" beforeDir="false" afterPath="$PROJECT_DIR$/screenshots/TC_4_Verify_that_user_can_login_with_valid_credentials.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/LoginTestDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/LoginTestDataGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/RegistrationTestDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/RegistrationTestDataGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/TC_1_Verify_that_a_new_user_can_register.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenshots/TC_4_Verify_that_user_can_login_with_valid_credentials.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/login/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/login/LoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/registration/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/registration/RegistrationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +42,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "TestNG.E:/Opencart_Tests/testng.xml.executor": "Run",
     "TestNG.LoginTests.TC_4_Verify_that_user_can_login_with_valid_credentials.executor": "Run",
-    "TestNG.LoginTests.executor": "Debug",
+    "TestNG.LoginTests.executor": "Run",
     "TestNG.RegistrationTests.TC_1_Verify_that_a_new_user_can_register.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
@@ -54,7 +54,7 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.E:/Opencart_Tests/testng.xml">
+  <component name="RunManager" selected="TestNG.LoginTests">
     <configuration name="E:/Opencart_Tests/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Opencart_Tests" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
@@ -120,10 +120,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.E:/Opencart_Tests/testng.xml" />
         <item itemvalue="TestNG.LoginTests" />
-        <item itemvalue="TestNG.RegistrationTests.TC_1_Verify_that_a_new_user_can_register" />
         <item itemvalue="TestNG.LoginTests.TC_4_Verify_that_user_can_login_with_valid_credentials" />
+        <item itemvalue="TestNG.E:/Opencart_Tests/testng.xml" />
+        <item itemvalue="TestNG.RegistrationTests.TC_1_Verify_that_a_new_user_can_register" />
       </list>
     </recent_temporary>
   </component>
@@ -183,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727984239087</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="init">
+      <option name="closed" value="true" />
+      <created>1728022004318</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1728022004318</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,7 +214,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/login/LoginTests.java</url>
-          <line>15</line>
+          <line>24</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
